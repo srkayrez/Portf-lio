@@ -9,6 +9,9 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import { CardProjetosComponent } from './card-projetos/card-projetos.component';
+
 
 
 
@@ -17,6 +20,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     AppComponent,
     MenuComponent,
     PerfilComponent,
+    CardProjetosComponent,
    ],
   imports: [
     BrowserModule,
@@ -26,6 +30,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatIconModule,
     MatSlideToggleModule,
     MatToolbarModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
