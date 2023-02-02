@@ -1,14 +1,42 @@
-<mat-drawer-container class="container w-full" autosize>
-    <mat-drawer #drawer class="sidenav" mode="push">
-      <p>Auto-resizing sidenav</p>
-      
-    </mat-drawer>
+<div>
+  <mat-sidenav-container class="sidenav h-full">
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened" class="bg-main-blue text-pure-white w-[250px] p-7">
+      <div class="h-full flex flex-col justify-start">
+        <!-- Navigation -->
+        <div class="sidenav-navigation">
+          <button mat-button [routerLink]="['']" class="sidenav-icon-button">
+            <mat-icon class="mx-2">home</mat-icon>
+            Dashboard
+          </button>
+        </div>
   
-    <div class="sidenav-content w-full">
-      <button type="button" mat-button (click)="drawer.toggle()">
-        Menu
-      </button>
-    </div>
-  
-  </mat-drawer-container>
-  
+        <!-- Sidenav Footer -->
+        <div class="mt-auto">
+          <div class="mode-change">
+            <mat-icon>brightness_2</mat-icon>
+            <span>Light Mode</span>
+            <mat-slide-toggle color="primary">On</mat-slide-toggle>
+          </div>
+          <button mat-button class="cursor-pointer bg-dm-secondary sidenav-icon-button">Logout</button>
+        </div>
+      </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="w-auto bg-secondary-gray/10">
+      <!-- TOOL BAR -->
+      <mat-toolbar class="shadow-md">
+        <button mat-icon-button (click)="sidenav.toggle()" class="example-icon" aria-label="Example icon-button with menu icon">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span class="flex-grow flex-shrink basis-auto"></span>
+      </mat-toolbar>
+
+      <!-- Page content-->
+      <div class="p-2">
+        <app-perfil></app-perfil>
+      </div>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+    
+</div>
