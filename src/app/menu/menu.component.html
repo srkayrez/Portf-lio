@@ -1,0 +1,14 @@
+<mat-drawer-container class="container w-full" autosize>
+    <mat-drawer #drawer class="sidenav" mode="push">
+      <p>Auto-resizing sidenav</p>
+      
+    </mat-drawer>
+  
+    <div class="sidenav-content w-full">
+      <button type="button" mat-button (click)="drawer.toggle()">
+        Menu
+      </button>
+    </div>
+  
+  </mat-drawer-container>
+  
